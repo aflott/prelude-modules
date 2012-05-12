@@ -5,6 +5,7 @@
 ;; Author: Gleb Peregud <gleber.p@gmail.com>
 ;; Version: 1.0.0
 ;; Keywords: convenience erlang
+;; Package-Requires: ((erlang "2.4.1"))
 
 ;; This file is not part of GNU Emacs.
 
