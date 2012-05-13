@@ -38,7 +38,7 @@
   (require 'prelude-css)
 
   (defun prelude-scss-mode-defaults ()
-    (prelude-css-mode-hook)
+    (prelude-css-mode-defaults)
     ;; turn off annoying auto-compile on save
     (setq scss-compile-at-save nil))
 
