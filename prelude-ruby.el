@@ -55,6 +55,8 @@
          (setq comint-process-echoes t)
          (ruby-block-mode t)
          (ruby-end-mode +1)
+         ;; CamelCase aware editing operations
+         (subword-mode +1)
          ;; bind yari in the local keymap
          (local-set-key (kbd "C-h r") 'yari))
 
