@@ -6,6 +6,7 @@
 ;; URL: http://batsov.com/emacs-prelude
 ;; Version: 1.0.0
 ;; Keywords: convenience
+;; Package-Requires: ((guru-mode "0.1"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -112,6 +113,7 @@
   (defun prelude-prog-mode-defaults ()
     "Default coding hook, useful with any programming language."
     (flyspell-prog-mode)
+    (guru-mode +1)
     (prelude-local-comment-auto-fill)
     (prelude-turn-on-whitespace)
     (prelude-turn-on-abbrev)
