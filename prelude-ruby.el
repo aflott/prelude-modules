@@ -43,6 +43,7 @@
   (add-to-list 'auto-mode-alist '("\\.ru\\'" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Gemfile\\'" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Guardfile\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("Capfile\\'" . ruby-mode))
 
   ;; We never want to edit Rubinius bytecode
   (add-to-list 'completion-ignored-extensions ".rbc")
@@ -56,6 +57,8 @@
          (ruby-block-mode t)
          (ruby-end-mode +1)
          (ruby-tools-mode +1)
+         ;; CamelCase aware editing operations
+         (subword-mode +1)
          ;; bind yari in the local keymap
          (local-set-key (kbd "C-h r") 'yari))
 
