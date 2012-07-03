@@ -6,7 +6,7 @@
 ;; URL: http://batsov.com/emacs-prelude
 ;; Version: 1.0.0
 ;; Keywords: convenience
-;; Package-Requires: ((prelude-programming "1.0.0") (inf-ruby "2.2.3") (yari "0.5") (ruby-end "0.0.1") (ruby-block "0.0.11"))
+;; Package-Requires: ((prelude-programming "1.0.0") (ruby-tools "0.0.1") (inf-ruby "2.2.3") (yari "0.5") (ruby-end "0.0.1") (ruby-block "0.0.11"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -55,6 +55,7 @@
          (setq comint-process-echoes t)
          (ruby-block-mode t)
          (ruby-end-mode +1)
+         (ruby-tools-mode +1)
          ;; bind yari in the local keymap
          (local-set-key (kbd "C-h r") 'yari))
 
