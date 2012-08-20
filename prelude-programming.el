@@ -6,7 +6,7 @@
 ;; URL: http://batsov.com/emacs-prelude
 ;; Version: 1.0.0
 ;; Keywords: convenience
-;; Package-Requires: ((guru-mode "0.1"))
+
 
 ;; This file is not part of GNU Emacs.
 
@@ -92,7 +92,7 @@
 
   (defun prelude-add-watchwords ()
     (font-lock-add-keywords
-     nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
+     nil '(("\\<\\(FIX\\|TBD\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
             1 font-lock-warning-face t))))
 
   ;; show the name of the current function definition in the modeline
@@ -112,13 +112,12 @@
   (defun prelude-prog-mode-defaults ()
     "Default coding hook, useful with any programming language."
     (flyspell-prog-mode)
-    (guru-mode +1)
+;    (guru-mode +1)
     (prelude-local-comment-auto-fill)
-    (prelude-turn-on-whitespace)
+;    (prelude-turn-on-whitespace)
     (prelude-turn-on-abbrev)
-    (prelude-add-watchwords)
-    ;; keep the whitespace decent all the time (in this buffer)
-    (add-hook 'before-save-hook 'whitespace-cleanup nil t))
+    (prelude-add-watchwords))
+;    (add-hook 'before-save-hook 'whitespace-cleanup nil t))
 
   (setq prelude-prog-mode-hook 'prelude-prog-mode-defaults)
 
